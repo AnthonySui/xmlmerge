@@ -29,9 +29,12 @@
 
 # 给专业人士
 使用的python是3.4，且安装必须的python库
+
     pip3 install openpyxl
+
 该库是2.35版本<br />
 打包exe工具请安装cx_Freeze，然后进入source文件夹
+
     python setup.py build
 
 # 版本信息
