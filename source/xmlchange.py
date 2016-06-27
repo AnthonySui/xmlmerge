@@ -6,7 +6,8 @@ import time
 from openpyxl import Workbook
 start = time.clock()
 wb=Workbook()
-sheet=wb.create_sheet(0,'爬虫抓取表')
+# sheet=wb.create_sheet(0,'爬虫抓取表')
+sheet=wb.create_sheet('爬虫抓取表',0) # 2.3.5
 i = 1
 def get_xmlnode(node,name):
     return node.getElementsByTagName(name) if node else []
@@ -89,6 +90,9 @@ def begin():
 		| 新浪微博：一只尼玛                    |
 		| 微信/QQ：569929309                    |
 		-----------------------------------------
+                    |实习已经结束，现在正式踏入社会|
+                    |工具可处理几艘客软件生成的文件|
+                    |如处理其他格式的XML请您自定义|
 	'''
     print(sangjin)
 
