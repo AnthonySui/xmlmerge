@@ -85,7 +85,6 @@ def begin():
 		|   进入运行目录运行后缀为exe的文件     |
 		| 2.XML是有格式要求的，会生成相关信息   |
 		-----------------------------------------
-		| 青木公司花名：桑槿                    |
 		| 时间：2015年11月26日                  |
 		| 新浪微博：一只尼玛                    |
 		| 微信/QQ：569929309                    |
@@ -119,11 +118,11 @@ for filename in xmls:
 		v3=clueid2[0].childNodes[0].data
 		curitem(noderoot,v1,v2,v3)
 		print("处理成功："+filename)
-	except:
+	except Exception as e:
+		raise
 		en = en+1
-		erpath.append(filename)
+		erpath.append(filename+"\n"+str(e))
 		pass
-		# raise
 
 wb.save(path)
 total = len(xmls)
